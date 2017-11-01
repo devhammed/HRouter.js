@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Not Found</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="description" content="Free Web Hosting Area provides unmetered traffic and free web space for domain or subdomain with php, mail, mysql, ftp support, no ads">
+<meta name="keywords" content="free web hosting, free hosting, free web space, free php hosting, free mysql database, no ads">
+<base target="_blank">
+<script type="text/javascript">if (top.location != location) { top.location.href = location.href; }</script>
+</head>
+
+<body>
+<table style="width: 800px; border: 2px solid #97C8E4; margin-left: auto; margin-right: auto;">
+<tr><td style="height: 2px; background-image: url('http://www.freewebhostingarea.com/images/border.gif'); background-color: #97C8E4;" colspan="2"></td></tr>
+<tr><td style="background-color: #FFFFFF" colspan="2">
+	<p style="margin: 10px 7px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;">
+	Welcome to <strong>Free Web Hosting Area</strong>!!<br>
+	<span style="font-size: 12px">Create your free account NOW at <a href="http://www.freewebhostingarea.com" style="text-decoration: none">
+	<span style="color: #3333FF">http://www.freewebhostingarea.com</span></a> or short <a href="http://www.freewha.com" style="text-decoration: none"><span style="color: #3333FF">http://www.freewha.com</span></a>.</span>
+	<p style="margin: 10px 7px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;">
+	<strong><a href="http://www.freewebhostingarea.com" style="color: #3333FF">Free Short Subdomain</a></strong>
+	<span style="font-size: 14px">: <strong>yourname.6te.net</strong> or 
+	<strong>yourname.eu5.org</strong> or <strong>yourname.xp3.biz</strong> or
+	<strong>yourname.orgfree.com</strong> or 
+	<strong>yourname.ueuo.com</strong> and more - <a href="http://www.freewebhostingarea.com"><strong style="color: #3333FF">Free Hosting</strong></a> for already registered domains</span>
+	</td></tr>
+<tr><td style="background-color: #F1F1F1; height: 110px;" colspan="2">
+	<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><script type='text/javascript' src='http://user99.freewebhostingarea.com/a/spot1e7xx.js'></script></p>
+</td></tr>
+<tr><td style="background-color: #FFFFFF; " colspan="2">
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 7px">
+	Free web space <strong>1500MB</strong>; <strong>unmetered traffic</strong>; daily/weekly backups&nbsp;on external source; absolutely <strong>no ads</strong> for low traffic sites; all countries/languages allowed;</p>
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 5px 7px 0px 0px">
+	<img src="http://www.freewebhostingarea.com/images/app.png" alt="" style="float: left; height: 48px; width: 48px; border-style: solid; border-width: 8px; border-color: #FFFFFF">- free domain hosting or free subdomain hosting;</p>
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 2px 7px 0px 0px">- free php 5 hosting with function mail() active, GD2 library, curl, magickwand/imagick (support for ImageMagick), sockets, xml, xsl, soap, pdo and much more;</p>
+</td></tr>
+<tr>
+	<td style="background-color: #F1F1F1; height: 270px; text-align: center;"><p style="text-align: center; margin-top: 0; margin-bottom: 0;"><script type='text/javascript' src='http://user99.freewebhostingarea.com/a/spot1e3xx.js'></script></p></td>
+	<td style="background-color: #F1F1F1; height: 270px; text-align: center;"><p style="text-align: center; margin-top: 0; margin-bottom: 0;"><script type='text/javascript' src='http://user99.freewebhostingarea.com/a/spot2e3xx.js'></script></p></td>
+</tr>
+<tr>
+	<td style="background-color: #FFFFFF;" colspan="2">
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 5px 7px 0px 0px">
+	<img src="http://www.freewebhostingarea.com/images/database.png" alt="" style="float: left; height: 48px; width: 48px; border-style: solid; border-width: 8px; border-color: #FFFFFF">- 
+	<strong>free MySQL 5 database</strong> (latest stable 5.5 version);<br>- 
+	<strong>phpMyAdmin</strong> preinstalled; one click database backup; one click database import;<br>
+	- unlimited accounts/databases allowed (database number per account is limited, but you can create more accounts);</p>
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 0px 7px 0px 0px">
+	<img src="http://www.freewebhostingarea.com/images/users.png" alt="" style="float: left; height: 48px; width: 48px; border-style: solid; border-width: 8px; border-color: #FFFFFF">
+	- account manager - tool to change account details, File Manager (WYSIWYG File Editor, FTP client - browser based, tool to set file permissions, to create directories, to create files, tool for renaming, zip/unzip utility and more).<br>
+	- <strong>one click autoinstaller</strong> (free forum, blog): Joomla, phpBB3, SMF, WordPress, Drupal, Mambo;</p>
+	</td>
+</tr>
+<tr><td style="background-color: #F1F1F1; height: 110px;" colspan="2">
+	<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><script type='text/javascript' src='http://user99.freewebhostingarea.com/a/spot2e7xx.js'></script></p>
+</td></tr>
+<tr><td style="background-color: #FFFFFF; " colspan="2">
+	<p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; margin: 7px">
+	<strong><a href="http://www.1freecounter.com" style="text-decoration: none">
+	<span style="color: #000000">Free Hit Counter</span></a></strong><br>
+	<span style="font-size: 12px">- Fast and easy signup<br>
+	- Detailed Statistics for Visitor Activity (Hourly Visitors, Pages Visited, Referrers, Keywords, Search Engines, Countries)<br>
+	- Detailed Statistics for Visitor Technology (Operating Systems, Web Browsers, Screen Resolutions)<br>- Detailed Analysis Of The Last Visitors</span><br>
+	<span style="font-size: 10px"><a href="http://www.1freecounter.com">...Read More</a></span>
+	</p>
+</td></tr>
+<tr><td style="height: 2px; background-image: url('http://www.freewebhostingarea.com/images/border.gif'); background-color: #97C8E4;" colspan="2"></td></tr>
+</table>
+
+</body>
+</html>
