@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HRouter.js - Simple and Lightweight Javascript Routing Library</title>
+<meta name="description" content="HRouter.js - Simple and Lightweight Javascript Routing Library for Single-page Web Applications and Mobile HTML5 App.">
+<link rel="stylesheet" href="h.css">
+</head>
+<body class="h-content">
+<header class="h-turquoise h-container">
+<h1>HRouter.js - Javascript Routing Made Easy</h1>
+</header>
+<main class="h-container h-light-grey">
+<a class="h-dark-grey h-btn" href="HRouter.js">Download v1.1</a>
+<a class="h-dark-grey h-btn" href="spa.html">View Demo</a>
+<a class="h-dark-grey h-btn" href="http://github.com/Horlahcoded/HRouter.js">Fork on Github</a>
+<div class="h-container">
+<h2>HRouter.js Javascript Routing Library</h2>
+HRouter.js is a Simple and Lightweight Javascript Routing Library suitable and designed for Single-page Web Applications and Mobile HTML5 Applications. it also has it own micro-template engine.<br>
+</div>
+<div class="h-container">
+<h2>How to Use & Examples</h2>
+HRouter.js doesnt require setup or installation, Download it <a href="HRouter.js">HERE</a> and Include it in your HTML5 Project then you Register/Add Routes using <b>HRoute</b> function, this function takes 3 Arguments. <br/>
+<div class="h-info">
+<p><i class="h-grey">Path</i> : The Route URL, it can be static or dynamic e.g <b>/about</b> or <b>/user/:name</b> (required)</p>.
+<p><i class="h-grey">Page ID</i> : The ID attribute value of the Page Script Tag (required)</p>
+<p><i class="h-grey">Handler</i> : The handler function takes 2 arguments ( param: Dynamic URL Variables Object, query: URL Query String Object ). it can also return Object that would be used in the page template.</p>
+<br>
+Check the live demo of below code <a href="spa.html" style="text-decoration:underline!important">Here</a>.
+<p>
+&lt;script type="text/html" id="home"&gt;<br>
+&lt;h1&gt;Home page&lt;/h1&gt;<br>
+&lt;p&gt;{% text %}&lt;/p&gt;<br>
+View: &lt;a href="#/user/Horlahcoded"&gt;Horlahcoded's profile&lt;/a&gt;<br>
+Search: &lt;a href="#/search/?q=HRouter"&gt;HRouter&lt;/a&gt;<br>
+&lt;/script&gt;<br>
+&lt;script type="text/html" id="profile"&gt;<br>
+&lt;h1&gt;{% username %} Profile&lt;/h1&gt;<br>
+&lt;p&gt;This is {% username %} profile&ltt;/p&gt;<br>
+&lt;/script&gt;<br>
+&lt;script type="text/html" id="search"&gt;<br>
+&lt;h1&gt;Search results for {% searchQuery %}&lt;/h1&gt;<br>
+&lt;p&gt;This is search results page&lt;/p&gt;<br>
+&lt;/script&gt;<br>
+&lt;div id="hr-app"&gt;&lt;/div&gt;
+&lt;script src="HRouter.js"&gt;&lt;/script&gt;
+&lt;script&gt;<br>
+// home page<br>
+HRoute('/', 'home', function (param, query) {<br>
+document.title = "Home page";<br>
+return {<br>
+text: "Hello world from HRouter template"<br>
+}<br>
+});<br>
+// example of 'param' usage : user profile<br>
+HRoute('/user/:name', 'profile', function (param, query) {<br>
+document.title = param.name + ' Profile';<br>
+return {<br>
+username: param.name<br>
+}<br>
+});<br>
+// example of 'query' usage : search<br/>
+HRoute('/search', 'search', function( param, query ) {<br>
+document.title = "Search results for " + query.q;<br>
+return {<br>
+searchQuery: query.q<br>
+}<br>
+});<br>
+&lt;/script&gt;<br>
+</p>
+</div>
+<h2>Notes:</h2>
+1. HRouter.js would redirect to 404 error page if no route was registered/found for the current URL.<br>
+2. SCRIPT tag with <i>type</i> "text/html" are used so that the page template will be ignored by browsers making it possible to write anything inside it.<br>
+3. HRouter come with a micro-template engine. put any expression or variable between {% and %} e.g {% name.toUpperCase() %}. it support ternary operators, math operations, variable and function declaration, method/function calls and other things you can put in eval() function.<br>
+4. You can link between pages using anchor links e.g &lt;a href="#/about">About page&lt;/a&gt; .NOTE: The Hash '#' is a must to put when linking.<br>
+5. HTML Block element e.g DIV, SECTION etc. with ID attribute value of <b>"hr-app"</b> will be used to render route pages.<br>
+</div>
+</main>
+<div class="h-panel">
+Thanks, Check out my other projects <a href="index.html">here</a>.
+</div>
+<p></p>
+<footer class="h-turquoise h-container">
+<h4>Copyright 2017 - Oyedele Hammed Horlah</h4>
+</footer>
+</body>
+</html>
