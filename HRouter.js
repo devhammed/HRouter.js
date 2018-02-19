@@ -18,7 +18,7 @@ HRouter.prototype = {
       go = function() {
         var url = location.hash.slice(1).split("?"),
         path = url[0] || "/",
-        qs = url[1] + "&" + location.search.slice(1) || "",
+        queryStr = url[1] + "&" + location.search.slice(1) || "",
         i = 0,
         keys = [];
         for ( ; i < self.routes.length; i++ ) {
@@ -26,18 +26,18 @@ HRouter.prototype = {
             keys.push( key );
             return "([^\/]+)";
           }) + "(?:\/$|$)" ),
-          m;
+          match;
           if ( reg.test( path ) ) {
-            m = reg.exec( path );
+            match = reg.exec( path );
             var req = { params: {}, query: {} };
-            m.slice(1).map(function( val, i ){
-              req.params[keys[i]] = val;
+            match.slice(1).map(function( val, idx ){
+              req.params[ keys[ idx ] ] = val;
             });
-            qs.split("&").map(function( p ){
-              p = p.split("=");
-              req.query[p[0]] = p[1];
+            queryStr.split("&").map(function( pair ){
+              pair = pair.split("=");
+              req.query[ pair[0] ] = pair[1];
             });
-            self.routes[i].fn( req );
+            self.routes[ i ].fn( req );
             break;
           }
         }
