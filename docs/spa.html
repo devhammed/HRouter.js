@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<script type="text/html" id="home">
+<h1>Homepage</h1>
+<p>{% text %}</p>
+View: <a href="#/user/Horlahcoded">Horlahcoded's profile</a><br>
+Search: <a href="#/search/?q=HRouter">HRouter</a><br>
+</script>
+<script type="text/html" id="profile">
+<h1>{% username %} Profile</h1>
+<p>This is {% username %} profile</p>
+</script>
+<script type="text/html" id="search">
+<h1>Search results for {% searchQuery %}</h1>
+<p>This is search results page</p>
+</script>
+<div id="hr-app"></div>
+<script src="HRouter.js"></script>
+<script>
+HRoute('/', 'home', function(param, query) {
+document.title = 'Home page';
+return {
+text: "Hello world from HRouter template"
+}
+});
+HRoute('/user/:name', 'profile', function(param, query) {
+document.title = param.name + ' Profile';
+return {
+username: param.name
+}
+});
+HRoute('/search', 'search', function(param, query) {
+document.title = 'Search results for ' + query.q;
+return {
+searchQuery: query.q
+}
+});
+</script>
+</body>
+</html>
