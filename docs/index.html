@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HRouter.js - Simple and Lightweight Javascript Routing Library</title>
+  <meta name="description" content="HRouter.js - Simple and Lightweight Javascript Routing Library for Single-page Web Applications and Mobile HTML5 App.">
+  <link rel="stylesheet" href="/h.css">
+</head>
+
+<body class="h-content">
+  <header class="h-turquoise h-container">
+    <h1>HRouter.js - Javascript Routing Made Easy</h1>
+  </header>
+  <main class="h-container h-light-grey">
+    <a class="h-dark-grey h-btn" href="HRouter.js">Download v1.1</a>
+    <a class="h-dark-grey h-btn" href="spa.html">View Demo</a>
+    <a class="h-dark-grey h-btn" href="http://github.com/devHammed/HRouter.js">Fork on Github</a>
+    <div class="h-container">
+      <h2>HRouter.js Javascript Routing Library</h2>
+      HRouter.js is a Simple and Lightweight Javascript Routing Library suitable and designed for Single-page Web Applications
+      and Mobile HTML5 Applications.
+      <br>
+    </div>
+    <div class="h-container">
+      <h2>How to Use & Examples</h2>
+      Download it
+      <a href="HRouter.js">HERE</a> and Include it in your Project then create instance of
+      <b>HRouter</b> object and add routes using the
+      <b>on( path, handler )</b> method then activate the routes using the
+      <b>run</b> method.
+      <br/>
+
+      <div class="h-info">
+        <h1 class="h-red">HRouter#on( path, handler)</h1>
+        <p>This method register routes.</p>
+        <p>
+          <i class="h-grey">Path</i> : The Route URL, it can be static or dynamic e.g
+          <b>/about</b> or
+          <b>/user/:name</b> (required)</p>.
+        <p>
+          <i class="h-grey">Handler</i> : The handler function executes each time the route is been visited and it takes 1 argument that is
+          an Object containing two Objects ( params: Dynamic URL Variables Object, query: URL Query String Object )</p>
+        <h1 class="h-red">HRouter#run()</h1>
+        <p>This method will initiate and add onload and onhashchange listeners to the window then redirect to appropriate route
+          and execute the route handler function, making the HRouter routes clean and bookmarkable.</p>
+        <br> Below is an example code that explains the Static, Dynamic and URL Query String concepts. Check the demo of below
+        code
+        <a href="spa.html" style="text-decoration:underline!important">here</a>.
+        <p>
+          <h1 class="h-red">index.html</h1>
+          <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="hrView"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="js/HRouter.js"&gt;&lt;/script&gt;
+&lt;script src="js/routes.js"&gt;&lt;/script&gt;
+&lt;/html&gt;
+</pre>
+          <h1 class="h-red">js/routes.js</h1>
+          <pre>
+/*
+  HRouter supports method chaining
+  and 'hrView' is a variable that points to
+  the block-level element
+  with id="hrView".
+*/
+var route = new HRouter();
+route.on( "/", function( req ){
+  document.title = "Home";
+  hrView.innerHTML = "Hello world";
+})
+.on( "/user/:name", function( req ){
+  var name = req.params.name;
+  document.title = "User " + name;
+  hrView.innerHTML = name + " profile";
+})
+.on( "/search", function( req ){
+  var search = req.query.q;
+  document.title = "Results for " + search;
+  hrView.innerHTML = "Results for " + search;
+});
+route.run();
+</pre>
+        </p>
+      </div>
+      <h2>Notes:</h2>
+      1. HRouter.js would redirect to Homepage if no route has been registered for the current URL.
+      <br> 2. You can link between pages using anchor links e.g &lt;a href="#/about">About page&lt;/a&gt; .NOTE: The Hash '#'
+      is a must to put when linking.
+      <br> 3. You should register static routes before registering almost similar dynamic routes to avoid conflicts e.g
+      <b>/about</b> before
+      <b>/:page</b>.
+      <br>
+    </div>
+  </main>
+  <div class="h-panel">
+    Thanks, Check out my other projects
+    <a href="index.html">here</a>.
+  </div>
+  <p></p>
+  <footer class="h-turquoise h-container">
+    <h4>Copyright 2017 - Oyedele Hammed Horlah</h4>
+  </footer>
+</body>
+
+</html>
