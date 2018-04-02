@@ -1,43 +1,28 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
+  <title></title>
 </head>
 <body>
-<script type="text/html" id="home">
-<h1>Homepage</h1>
-<p>{% text %}</p>
-View: <a href="#/user/Horlahcoded">Horlahcoded's profile</a><br>
-Search: <a href="#/search/?q=HRouter">HRouter</a><br>
-</script>
-<script type="text/html" id="profile">
-<h1>{% username %} Profile</h1>
-<p>This is {% username %} profile</p>
-</script>
-<script type="text/html" id="search">
-<h1>Search results for {% searchQuery %}</h1>
-<p>This is search results page</p>
-</script>
-<div id="hr-app"></div>
+<div id="hrView"></div>
 <script src="HRouter.js"></script>
 <script>
-HRoute('/', 'home', function(param, query) {
-document.title = 'Home page';
-return {
-text: "Hello world from HRouter template"
-}
+var route = new HRouter();
+route.on("/", function( req ){
+document.title = "Home";
+hrView.innerHTML = "Homepage - view <a href='#/user/Horlahcoded'>Horlahcoded</a> profile.";
+})
+.on( "/user/:name", function( req ){
+var name = req.params.name;
+document.title = name;
+hrView.innerHTML = name + " profile - Search <a href='#/search?q=HRouter'>HRouter</a>";
+})
+.on("/search", function( req ){
+var search = req.query.q;
+document.title = search + " results";
+hrView.innerHTML = "Search results for " + search + " - go back to <a href='#/'>home</a>";
 });
-HRoute('/user/:name', 'profile', function(param, query) {
-document.title = param.name + ' Profile';
-return {
-username: param.name
-}
-});
-HRoute('/search', 'search', function(param, query) {
-document.title = 'Search results for ' + query.q;
-return {
-searchQuery: query.q
-}
-});
+route.run();
 </script>
 </body>
 </html>
