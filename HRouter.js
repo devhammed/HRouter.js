@@ -10,7 +10,7 @@ function HRouter() {
 }
 HRouter.prototype = {
   on: function( path, fn ) {
-    this.routes.push({ path: path, fn: fn });
+    this.routes.push( { path: path, fn: fn } );
     return this;
   },
   run: function() {
